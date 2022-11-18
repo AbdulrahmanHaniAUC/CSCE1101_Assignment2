@@ -20,7 +20,7 @@ private:
     int front;
 public:
     Queue() {
-        length = size();
+        length = MAX_SIZE;
         WorkshopQueue.resize(length);
         count = 0;
         front = 0;

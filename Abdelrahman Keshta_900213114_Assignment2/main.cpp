@@ -10,72 +10,74 @@
 
 using namespace std;
 
-//void fileMechanics(Mechanic& employee, int& line);
-//void fileCustomers(Customer& client, int& line);
+void fileMechanics(Mechanic& employee, int& line);
+void fileCustomers(Customer& client, int& line);
 
 int main(){
     Queue<Customer> customerQueue;
     Queue<Mechanic> mechanicQueue;
     
     Mechanic employee1(1);
-    employee1.setName("Ayman");
-    employee1.setAge(35);
-    employee1.setID(11);
-    employee1.setSession(13, 00, 0);
+//    employee1.setName("Ayman");
+//    employee1.setAge(35);
+//    employee1.setID(11);
+//    employee1.setSession(13, 00, 0);
     
     Mechanic employee2(2);
-    employee2.setName("Kahlid");
-    employee2.setAge(29);
-    employee2.setID(222);
-    employee2.setSession(16, 00, 1);
-    employee2.setSession(19, 00, 2);
+//    employee2.setName("Kahlid");
+//    employee2.setAge(29);
+//    employee2.setID(222);
+//    employee2.setSession(16, 00, 1);
+//    employee2.setSession(19, 00, 2);
     
     Mechanic employee3(1);
-    employee3.setName("Mai");
-    employee3.setAge(41);
-    employee3.setID(333);
-    employee3.setSession(18, 45, 3);
+//    employee3.setName("Mai");
+//    employee3.setAge(41);
+//    employee3.setID(333);
+//    employee3.setSession(18, 45, 3);
 
     
     Customer client1;
-    client1.setName("Ahmed");
-    client1.setAge(21);
-    client1.setID(732);
-    client1.setMechanicID(111);
-    client1.setSession(11, 00);
+//    client1.setName("Ahmed");
+//    client1.setAge(21);
+//    client1.setID(732);
+//    client1.setMechanicID(111);
+//    client1.setSession(11, 00);
     
     Customer client2;
-    client2.setName("Sara");
-    client2.setAge(47);
-    client2.setID(645);
-    client2.setMechanicID(222);
-    client2.setSession(12, 00);
+//    client2.setName("Sara");
+//    client2.setAge(47);
+//    client2.setID(645);
+//    client2.setMechanicID(222);
+//    client2.setSession(12, 00);
 
     Customer client3;
-    client3.setName("Kareem");
-    client3.setAge(33);
-    client3.setID(839);
-    client3.setMechanicID(222);
-    client3.setSession(18, 00);
+//    client3.setName("Kareem");
+//    client3.setAge(33);
+//    client3.setID(839);
+//    client3.setMechanicID(222);
+//    client3.setSession(18, 00);
 
     
     Customer client4;
-    client4.setName("Mohamed");
-    client4.setAge(19);
-    client4.setID(690);
-    client4.setMechanicID(333);
-    client4.setSession(18, 45);
+//    client4.setName("Mohamed");
+//    client4.setAge(19);
+//    client4.setID(690);
+//    client4.setMechanicID(333);
+//    client4.setSession(18, 45);
     
-//    int line = 0;
-//
-//    fileMechanics(employee1, line);
-//    fileMechanics(employee2, line);
-//    fileMechanics(employee3, line);
-//
-//    fileCustomers(client1, line);
-//    fileCustomers(client2, line);
-//    fileCustomers(client3, line);
-//    fileCustomers(client4, line);
+    int line = 0;
+
+    fileMechanics(employee1, line);
+    fileMechanics(employee2, line);
+    fileMechanics(employee3, line);
+
+    line = 0;
+    
+    fileCustomers(client1, line);
+    fileCustomers(client2, line);
+    fileCustomers(client3, line);
+    fileCustomers(client4, line);
 
     mechanicQueue.push(employee1);
     mechanicQueue.push(employee2);
@@ -100,20 +102,27 @@ int main(){
     customerQueue.push(client4);
 
     customerQueue.pop().print();
-    customerQueue.pop().print();
-    customerQueue.pop().print();
-    customerQueue.pop().print();
+    cout << endl;
     
+    customerQueue.pop().print();
+    cout << endl;
+
+    customerQueue.pop().print();
+    cout << endl;
+
+    customerQueue.pop().print();
+    cout << endl;
+
     return 0;
 }
-/*
+
 void fileMechanics(Mechanic& employee, int& line) {
     ifstream myFile;
     myFile.open("mechanics.txt", ios::in);
     
-    string myText[18];
+    string myText[20];
     
-    for (int i = 0; i < 18; i++) {
+    for (int i = 0; i < 20; i++) {
         getline(myFile, myText[i]);
     }
     
@@ -167,4 +176,3 @@ void fileCustomers(Customer& client, int& line) {
     
     myFile.close();
 }
-*/

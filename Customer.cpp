@@ -70,12 +70,14 @@ bool Customer:: operator == (Customer& x) {
 }
 
 void Customer:: print() {
+    cout << "-------------------------------------------------" << endl;
     cout << "*Customer Reciept*" << endl;
     cout << "Customer Name: " << this->getName() << endl;
     cout << "Customer ID: " << this->getID() << endl;
     cout << "Customer Age: " << this->getAge() << endl;
-    cout << "-------------------------------------------------" << endl;
+    cout << "--------------------------" << endl;
     cout << "Mechanic Name: " << getName() << endl;
     cout << "Mechanic ID: " << getMechanicID() << endl;
     cout << "Appointment Time: " << session.hours << ":" << session.mins << endl;
+    cout << "-------------------------------------------------" << endl;
 }
